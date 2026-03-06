@@ -104,6 +104,28 @@
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.10);
         }
+        .weather-widget {
+            max-width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .weather-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .weather-loading span {
+            font-size: 2rem;
+        }
+        .weather-loading p {
+            margin: 0;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -122,6 +144,12 @@
                     <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&fit=crop&w=200&q=80" alt="Husky" class="favorite-img">
                     <img src="https://images.pexels.com/photos/3912838/pexels-photo-3912838.jpeg?auto=compress&fit=crop&w=200&q=80" alt="Plane" class="favorite-img">
                     <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&fit=crop&w=200&q=80" alt="Chicago Hot Dog" class="favorite-img">
+                </div>
+            </div>
+            <div class="weather-widget" id="weather-widget">
+                <div class="weather-loading">
+                    <span>🌤️</span>
+                    <p>Loading weather data...</p>
                 </div>
             </div>
         </div>
