@@ -17,7 +17,7 @@
         .business-card {
             width: 700px;
             height: 400px;
-            background: rgba(255,255,255,0.95);
+            background: url('https://images.pexels.com/photos/2101187/pexels-photo-2101187.jpeg?auto=compress&fit=crop&w=700&q=80') center/cover no-repeat;
             border-radius: 16px;
             box-shadow: 0 4px 24px rgba(255,0,204,0.15);
             display: flex;
@@ -27,15 +27,6 @@
             gap: 36px;
             position: relative;
             overflow: hidden;
-        }
-        .cherry-blossoms {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
         }
         .card-photo {
             width: 160px;
@@ -97,15 +88,6 @@
 </head>
 <body>
     <div class="business-card">
-        <svg class="cherry-blossoms" viewBox="0 0 700 400">
-            <g opacity="0.18">
-                <path d="M80 60c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#ffb6c1" stroke="#ff00cc" stroke-width="2"/>
-                <path d="M620 320c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#fff" stroke="#ff00cc" stroke-width="2"/>
-                <path d="M350 200c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#ffb6c1" stroke="#ff00cc" stroke-width="2"/>
-                <path d="M200 350c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#fff" stroke="#ff00cc" stroke-width="2"/>
-                <path d="M500 80c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#ffb6c1" stroke="#ff00cc" stroke-width="2"/>
-            </g>
-        </svg>
         <img src="1734321584655.jpg" alt="Your Photo" class="card-photo">
         <div class="card-details">
             <div class="card-name">Nadia Magenta</div>
