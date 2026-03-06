@@ -156,14 +156,20 @@
                     <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&fit=crop&w=200&q=80" alt="Chicago Hot Dog" class="favorite-img">
                 </div>
             </div>
-            <div class="weather-widget-io-container" style="margin-top:32px;">
+            <div class="weather-widget-io-container" style="margin-top:32px; min-height: 80px;">
                 <a class="weatherwidget-io" href="https://forecast7.com/en/41d88n87d62/chicago/" data-label_1="CHICAGO" data-label_2="WEATHER" data-theme="original">CHICAGO WEATHER</a>
             </div>
         </div>
     </div>
 </body>
 <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+    // Only load the widget script if not already present
+    if (!document.getElementById('weatherwidget-io-js')) {
+        var js = document.createElement('script');
+        js.id = 'weatherwidget-io-js';
+        js.src = 'https://weatherwidget.io/js/widget.min.js';
+        document.body.appendChild(js);
+    }
 </script>
 </body>
 </html>
