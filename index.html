@@ -25,20 +25,33 @@
             align-items: flex-start;
             padding: 48px;
             gap: 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cherry-blossoms {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
         }
         .card-photo {
-            width: 72px;
-            height: 72px;
+            width: 160px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #ff00cc;
-            box-shadow: 0 2px 8px rgba(255,0,204,0.12);
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            z-index: 1;
         }
         .card-details {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             height: 100%;
+            z-index: 1;
         }
         .card-description {
             font-size: 1.2rem;
@@ -84,6 +97,15 @@
 </head>
 <body>
     <div class="business-card">
+        <svg class="cherry-blossoms" viewBox="0 0 700 400">
+            <g opacity="0.18">
+                <path d="M80 60c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#ffb6c1" stroke="#ff00cc" stroke-width="2"/>
+                <path d="M620 320c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#fff" stroke="#ff00cc" stroke-width="2"/>
+                <path d="M350 200c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#ffb6c1" stroke="#ff00cc" stroke-width="2"/>
+                <path d="M200 350c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#fff" stroke="#ff00cc" stroke-width="2"/>
+                <path d="M500 80c20-30 60-30 80 0s-10 60-40 60-60-30-40-60z" fill="#ffb6c1" stroke="#ff00cc" stroke-width="2"/>
+            </g>
+        </svg>
         <img src="1734321584655.jpg" alt="Your Photo" class="card-photo">
         <div class="card-details">
             <div class="card-name">Nadia Magenta</div>
