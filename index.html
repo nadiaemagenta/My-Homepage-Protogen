@@ -48,10 +48,24 @@
             font-weight: bold;
             cursor: pointer;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
         }
         .contact-btn:hover {
-            background: linear-gradient(90deg, #87cefa 0%, #ffb6c1 100%);
+            background: linear-gradient(270deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+            background-size: 400% 400%;
+            animation: rainbow-gradient 2s linear infinite, throb 0.6s ease-in-out infinite alternate;
+            transform: scale(1.08);
+        }
+        @keyframes rainbow-gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        @keyframes throb {
+            0% {transform: scale(1.08);}
+            100% {transform: scale(0.95);}
         }
     </style>
 </head>
