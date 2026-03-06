@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffb6f1 0%, #a8ff78 100%);
+        }
+        .splash-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .dolphin-art {
+            width: 320px;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .lisa-frank-text {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Segoe UI', cursive;
+            font-size: 2.2rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ffb6f1, #ffb347, #a8ff78, #87cefa, #ffb6c1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 8px #fff, 0 0 12px #ffb6f1;
+            margin-top: 8px;
+        }
+        @keyframes wave {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(20px); }
+            100% { transform: translateY(0); }
+        }
+        .dolphin-art svg {
+            animation: wave 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-container">
+        <div class="dolphin-art">
+            <!-- Lisa Frank themed dolphin riding waves SVG -->
+            <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="160" cy="160" rx="160" ry="160" fill="url(#bgGradient)" />
+                <path d="M120 180 Q140 120 220 140 Q240 150 210 180 Q200 200 160 190 Q140 185 120 180" fill="#87cefa" stroke="#fff" stroke-width="4" />
+                <path d="M170 140 Q180 110 210 120 Q220 130 200 150 Q190 160 170 140" fill="#ffb6f1" stroke="#fff" stroke-width="3" />
+                <ellipse cx="200" cy="130" rx="8" ry="4" fill="#fff" />
+                <ellipse cx="205" cy="125" rx="3" ry="3" fill="#000" />
+                <ellipse cx="210" cy="120" rx="2" ry="2" fill="#fff" />
+                <path d="M180 150 Q185 145 190 150" stroke="#000" stroke-width="2" />
+                <path d="M120 180 Q130 200 160 210 Q190 220 210 200" stroke="#ffb347" stroke-width="4" fill="none" />
+                <defs>
+                    <radialGradient id="bgGradient" cx="0" cy="0" r="1" gradientTransform="translate(160 160) scale(160)" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ffb6f1" />
+                        <stop offset="0.5" stop-color="#a8ff78" />
+                        <stop offset="1" stop-color="#87cefa" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="lisa-frank-text">Welcome to My Homepage!</div>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 1000);
+    </script>
+</body>
+</html>
